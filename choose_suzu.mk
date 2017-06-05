@@ -17,8 +17,7 @@ TARGET_BOOTANIMATION_SIZE := 1080x608
 
 # Inherit device parts
 $(call inherit-product, device/sony/suzu/device.mk)
-$(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # kernel
@@ -26,7 +25,7 @@ TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 
 # Override Product Name for OmniROM
 PRODUCT_DEVICE := suzu
-PRODUCT_NAME := omni_suzu
+PRODUCT_NAME := choose_suzu
 PRODUCT_MODEL := Xperia X
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
@@ -38,4 +37,4 @@ TARGET_OTA_ASSERT_DEVICE := F5121,F5122,suzu
 TARGET_SYSTEM_PROP += device/sony/suzu/system.prop
 
 # Inherit OmniROM parts
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/choose-a/config/gsm.mk)
