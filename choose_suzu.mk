@@ -33,8 +33,5 @@ PRODUCT_MANUFACTURER := Sony
 # Assert
 TARGET_OTA_ASSERT_DEVICE := F5121,F5122,suzu
 
-# Suzu Props
-TARGET_SYSTEM_PROP += device/sony/suzu/system.prop
-
 # Inherit Choose-A parts
 $(call inherit-product, vendor/choose-a/config/gsm.mk)
