@@ -79,11 +79,6 @@ PRODUCT_PACKAGES += \
     InCallUI \
     Stk
 
-# SnapdragonCamera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera \
-    SnapdragonGallery
-
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
