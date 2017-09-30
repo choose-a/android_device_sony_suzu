@@ -12,4 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/choose_suzu.mk
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 1080x608
+
+# Inherit device parts
+$(call inherit-product, device/sony/suzu/aosp_f5121.mk)
+
+# Override Product Name
+PRODUCT_NAME := choose_suzu
+PRODUCT_MODEL := Xperia X
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := none
+
