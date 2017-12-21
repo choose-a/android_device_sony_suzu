@@ -12,20 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/loire-common/PlatformConfig.mk
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 1080x608
 
-TARGET_BOOTLOADER_BOARD_NAME := F5121
+# Inherit device parts
+$(call inherit-product, device/sony/suzu/aosp_f5121.mk)
+$(call inherit-product, device/sony/common/choose-a.mk)
 
-# Platform
-PRODUCT_PLATFORM := loire
+# Override Product Name
+PRODUCT_NAME := choose_suzu
+PRODUCT_MODEL := Xperia X
 
-BOARD_KERNEL_CMDLINE += androidboot.hardware=suzu
+# Assert
+TARGET_OTA_ASSERT_DEVICE := none
 
-# Partition information
-BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 7843348480
-# Reserve space for data encryption (22225616896-16384)
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 22225600512
-
-#TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
