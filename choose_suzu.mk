@@ -24,5 +24,5 @@ PRODUCT_NAME := choose_suzu
 PRODUCT_MODEL := Xperia X
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := none
+TARGET_OTA_ASSERT_DEVICE := suzu,suzuds,f5121,f5122
 
